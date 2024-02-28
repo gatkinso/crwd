@@ -15,7 +15,13 @@ There are lots of warts - for instance:
 
 ### Building file-finder
 
-You need CMake.
+You need CMake.  This targets MacOS running:
+```
+geoffrey@redchip source % clang --version
+Apple clang version 15.0.0 (clang-1500.0.40.1)
+```
+
+I do not have a VM of Linux with a version of gcc supporting C++17 - but I bet it would work fine.  Same for Windows.
 
 To build file-finder, simply `cd` above the top level directory of this repository.
 
