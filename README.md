@@ -19,11 +19,12 @@ There are lots of warts - for instance:
 
 ## If I had more time I would...
 
-...probably not do anything different.  In production however this code would never fly.  Exception handling, proper thread wrapper... now that I think of it const correctness needs to be audited... so much would need to happen.
+...probably not do anything different (aside from a bit more cleanup).  In production however this code would never fly.  Exception handling, proper thread wrapper... now that I think of it const correctness needs to be audited... so much would need to happen.
 
 ### Building file-finder
 
 You need CMake.  This targets MacOS running:
+
 ```
 geoffrey@redchip source % clang --version
 Apple clang version 15.0.0 (clang-1500.0.40.1)
@@ -63,8 +64,6 @@ geoffrey@redchip source % cmake --build build_crwd
 [ 66%] Building CXX object src/bin/file-finder/CMakeFiles/file-finder.dir/main.cpp.o
 [100%] Linking CXX executable file-finder
 [100%] Built target file-finder
-geoffrey@redchip source % ls -l /tmp                                                                   
-lrwxr-xr-x@ 1 root  wheel  11 Jan 12 02:19 /tmp -> private/tmp
 geoffrey@redchip source % ls -l /tmp/
 total 0
 -rw-r--r--  1 geoffrey  wheel    0 Feb 28 08:06 aaaaa.pdf
