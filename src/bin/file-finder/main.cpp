@@ -35,7 +35,6 @@ void dumpThreadFcn() {
 }
 
 void userThreadFcn() {
-    static int i = 0;
     userRunning.store(true);
     while(userRunning.load()) {
         char cmd {};
