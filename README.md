@@ -12,6 +12,7 @@ There are lots of warts - for instance:
 * This code is very inefficient.  Uses way too much CPU.
 * I did not run againt a leak detector, but I am "pretty sure" it is not leaking.  :-)
 * I am not one to be very concerned about typos.
+* let's face it - A lot of error checking is just flat out ignored.
 
 ### Building file-finder
 
