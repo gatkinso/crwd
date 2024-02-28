@@ -14,6 +14,10 @@ There are lots of warts - for instance:
 * I am not one to be very concerned about typos.
 * let's face it - A lot of error checking is just flat out ignored.
 
+## If I had more time I would...
+
+...probably not do anything different.  In production however this code would never fly.  Execption handling, proper thread wrapper... now that I think of it const correctness needs to be audited... so much would need to happen.
+
 ### Building file-finder
 
 You need CMake.  This targets MacOS running:
