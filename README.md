@@ -1,22 +1,25 @@
 # file-finder - a coding challenge
 
+Geoffrey Atkinson
+geoffrey.j.atkinson@gmail.com
+
 OK here it is.  In the vein for keeping things simple, I just dropped some thread functions into main.cpp.
 
 Normally these would be classes, blahblah, but the intent is to demonstrate threading knowledge.
 
-There is an example, non building unit test based on GTest, just to show that this is how it wold be done.
+There is an example, non building, unit test based on GTest, just to show that this is how it wuold be done.
 
 There are lots of warts - for instance:
 * CORRECTNESS:::: not checking if the scan is complete before dumping.  Spam the 'd' button, you get inconsistent results.
-* exception handling is non existant.
+* Exception handling is non existant.
 * This code is very inefficient.  Uses way too much CPU.
 * I did not run againt a leak detector, but I am "pretty sure" it is not leaking.  :-)
 * I am not one to be very concerned about typos.
-* let's face it - A lot of error checking is just flat out ignored.
+* Let's face it - A lot of error checking is just flat out ignored.
 
 ## If I had more time I would...
 
-...probably not do anything different.  In production however this code would never fly.  Execption handling, proper thread wrapper... now that I think of it const correctness needs to be audited... so much would need to happen.
+...probably not do anything different.  In production however this code would never fly.  Exception handling, proper thread wrapper... now that I think of it const correctness needs to be audited... so much would need to happen.
 
 ### Building file-finder
 
@@ -37,7 +40,7 @@ Then run cmake:
  To run:
     $ ./build_crwd/src/bin/file-finder/file-finder /tmp aa bb
     
-## Output
+### Output
 ```
 geoffrey@redchip source % cmake -S crwd -B build_crwd                            
 -- The C compiler identification is AppleClang 15.0.0.15000040
