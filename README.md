@@ -7,7 +7,7 @@ OK here it is.  In the vein for keeping things simple, I just dropped some threa
 
 Normally these would be classes, blahblah, but the intent is to demonstrate threading knowledge.
 
-There is an example, non building, unit test based on GTest, just to show that this is how it wuold be done.
+There is an example, non building, unit test based on GTest, just to show that this is how it would be done.
 
 There are lots of warts - for instance:
 * CORRECTNESS:::: not checking if the scan is complete before dumping.  Spam the 'd' button, you get inconsistent results.
