@@ -12,8 +12,8 @@ namespace ff {
     class Container {
     public:
         Container() = default;
-        ~Container();
-
+        ~Container() = default;
+        
         void Dump();
         void Add(const string& val);
         void Clear();

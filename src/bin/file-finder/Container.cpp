@@ -5,8 +5,6 @@ using namespace std;
 
 namespace ff {
 
-Container::~Container() {}
-
 void Container::Dump() {
     scoped_lock<mutex> lock(values_mtx_);
     cout << "Dumping container" << endl;

@@ -63,10 +63,10 @@ void workerThreadFcn(const string tgt, const string sstr) {
     int i = 0;
     while(userRunning.load()) {
         for (const auto & entry : recursive_directory_iterator(tgt)) {
-            const auto &path = entry.path().string();
+            const auto &path = entry.path().filename().string();
             const auto iter = std::search(path.begin(), path.end(), boyer_moore_searcher(sstr.begin(), sstr.end()));
             if(iter != path.end()) {
-                container.Add(path);
+                container.Add(entry.path().string());
             }
             if(false == userRunning.load())
                 break;
@@ -81,7 +81,7 @@ void showHelp() {
     cout << "The application takes the directory to search as the first command line argument, followed by one or more substrings (literals, not wildcards) to search for." << endl;
     cout << "file-finder <dir> <substring1>[<substring2> [<substring3>]...]" << endl;
     cout << "For example: file-finder tmp aaa bbb ccc" << endl << endl;
-    cout << "Hitting the q or Q  key will quit.  Hitting the q or Q key will dump contents of search." << endl;
+    cout << "Hitting the q or Q  key will quit.  Hitting the d or D key will dump contents of search." << endl << endl;
     cout << "Search results will display periodically." << endl;
 }
 
