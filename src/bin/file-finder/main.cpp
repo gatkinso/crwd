@@ -24,7 +24,8 @@ condition_variable cvDump;
 mutex dumpMtx;
 
 void dumpThreadFcn() {
-    unique_lock<mutex> lock(dumpMtx); 
+    unique_lock<mutex> lock(dumpMtx);
+    userRunning.store(true); 
 
     while(userRunning.load()) {
         cvDump.wait_for(lock, 10s);
