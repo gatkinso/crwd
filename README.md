@@ -36,7 +36,7 @@ To build file-finder, simply `cd` above the top level directory of this reposito
 
 Then run cmake:
  * cmake -S crwd -B build_crwd
- * cmake --build .
+ * cmake --build build_crwd
 
  To run:
     $ ./build_crwd/src/bin/file-finder/file-finder /tmp aa bb
