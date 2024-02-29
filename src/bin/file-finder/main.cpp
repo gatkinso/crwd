@@ -64,7 +64,7 @@ void workerThreadFcn(const string tgt, const string sstr) {
     while(userRunning.load()) {
         for (const auto & entry : recursive_directory_iterator(tgt)) {
             const auto &path = entry.path().filename().string();
-            const auto iter = std::search(path.begin(), path.end(), boyer_moore_searcher(sstr.begin(), sstr.end()));
+            const auto iter = search(path.begin(), path.end(), boyer_moore_searcher(sstr.begin(), sstr.end()));
             if(iter != path.end()) {
                 container.Add(entry.path().string());
             }
